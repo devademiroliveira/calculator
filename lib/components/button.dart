@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class Button extends StatelessWidget {
-  static const dark = Color.fromRGBO(82, 82, 82, 1);
-  static const padrao = Color.fromRGBO(170, 55, 145, 3);
-  static const operacao = Color.fromRGBO(250, 158, 13, 1);
+  static const dark = Color.fromRGBO(80, 98, 102, 1);
+  static const padrao = Color.fromRGBO(129, 130, 116, 1);
+  static const operacao = Color.fromRGBO(189, 224, 56, 1);
 
   const Button({
     Key? key,

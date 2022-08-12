@@ -6,7 +6,7 @@ import 'button.dart';
 class Keyboard extends StatelessWidget {
   const Keyboard({Key? key, required this.cb}) : super(key: key);
 
-  final void Function(String) cb;
+  final Function(String) cb;
 
   @override
   Widget build(BuildContext context) {

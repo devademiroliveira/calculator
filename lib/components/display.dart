@@ -11,7 +11,7 @@ class Display extends StatelessWidget {
     return Expanded(
       flex: 1,
       child: Container(
-        color: const Color.fromRGBO(200, 110, 100, 1),
+        color: const Color.fromRGBO(16, 69, 79, 1),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           crossAxisAlignment: CrossAxisAlignment.stretch,

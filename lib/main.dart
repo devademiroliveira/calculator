@@ -1,6 +1,19 @@
+//import 'package:calculator/screens/imc.dart';
+import 'package:calculator/models/drawer.dart';
 import 'package:flutter/material.dart';
-import 'screens/calculator.dart';
 
 void main() {
-  runApp(const Calculator());
+  runApp(const Home());
+}
+
+class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: HiddenDrawer(),
+    );
+  }
 }
