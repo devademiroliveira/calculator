@@ -15,6 +15,7 @@ class _MoedasState extends State<Moedas> {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
+        backgroundColor: Colors.white,
         body: Column(
           children: const [
             TabBar(tabs: [

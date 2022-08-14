@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:calculator/screens/calculator.dart';
 import 'package:calculator/screens/imc.dart';
 import 'package:calculator/screens/moedas.dart';
@@ -12,18 +14,25 @@ class HiddenDrawer extends StatefulWidget {
 }
 
 class _HiddenDrawerState extends State<HiddenDrawer> {
+  Color color = Colors.deepPurple;
+
   List<ScreenHiddenDrawer> _pages = [];
 
   final selectTextStyle = const TextStyle(
     fontWeight: FontWeight.bold,
     fontSize: 22,
-    color: Colors.white,
+    color: Colors.deepPurple,
   );
   final defaultTextStyle = const TextStyle(
     fontWeight: FontWeight.normal,
     fontSize: 22,
     color: Colors.black54,
   );
+  void changeColor() {
+    setState(() {
+      color = Colors.primaries[Random().nextInt(Colors.primaries.length)];
+    });
+  }
 
   @override
   void initState() {
@@ -60,7 +69,17 @@ class _HiddenDrawerState extends State<HiddenDrawer> {
   @override
   Widget build(BuildContext context) {
     return HiddenDrawerMenu(
-      backgroundColorMenu: Colors.deepPurple,
+      //backgroundColorContent: color,
+      backgroundColorAppBar: color,
+      actionsAppBar: [
+        IconButton(
+          onPressed: () {
+            changeColor();
+          },
+          icon: const Icon(Icons.color_lens),
+        )
+      ],
+      backgroundColorMenu: color,
       screens: _pages,
       initPositionSelected: 0,
       slidePercent: 40,
